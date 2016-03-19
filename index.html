@@ -115,21 +115,8 @@
             transform: translate(1000px 0);
             -webkit-transform:translate(1000px ,0) ;
         }
-        #box .one .up{
-            display: none;
-            position: absolute;
-            bottom: 8%;
-            background: url("imges/_jiantou.png") no-repeat -120px -90px;
-            width: 50px;
-            height: 50px;
-            left: 50%;
-            margin-left: -25px;
-            -webkit-animation:up 1s infinite linear;
-        }
-        @-webkit-keyframes up{
-            0%{ transform:translate(0,-20px); }
-            100%{ transform:translate(0,0); }
-        }
+
+
 
         #box .two{
             width: 100%;
@@ -428,8 +415,7 @@
                 <p>反而睡不着</p>
             </span>
         </div>
-        <div class="up">
-        </div>
+
     </div >
     <div class="two">
         <div class="border"></div>
@@ -530,9 +516,6 @@ var flag=null
             })(i);
 
         }
-        window.setTimeout(function(){
-            document.querySelector(".one").querySelector(".up").style.display="block";
-        },2000);
 
 
 
@@ -650,7 +633,7 @@ flag=true
         var moveTouch=  e.changedTouches[0].pageY;
         var movePos=moveTouch-this.startX;
         var index=this.index;
-        console.log(this.index)
+
         if(movePos>0){
             this.prevSIndex=(index==0?oLis.length-1:index-1);
             var duration=-winH+movePos
